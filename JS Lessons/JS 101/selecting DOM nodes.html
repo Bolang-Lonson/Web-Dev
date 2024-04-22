@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 101</title>
+</head>
+<body>
+    <ol>
+        <li>This is one</li>
+        <li class="second">This is two</li>
+        <li>This is three</li>
+
+    </ol>
+    <script>
+        const elems = document.querySelectorAll('li');
+
+        elems.forEach((node, index) => {
+            node.innerText = `Hello this is item ${index+1}`;
+        });
+
+        elems.forEach(node => {
+            node.classList.add('custom-class', 'second-class');
+        });  // adds classes to list of classes for html element
+        const hh = document.getElementsByClassName('second')
+
+        console.log(hh)
+    </script>
+</body>
+</html>

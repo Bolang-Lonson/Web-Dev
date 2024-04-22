@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            position: relative;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        #container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* #container div {
+            border: 1px solid red;
+        } */
+        .navigation {
+            flex-basis: 20%;
+            flex-grow: 0;
+            flex-shrink: 1;
+            padding-top: 50%;
+        }
+        .content {
+            flex-basis: 80%;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+        .header {
+            flex-basis: 100%;
+            flex-grow: 1;
+            flex-shrink: 0;
+            background-color: #f5f5f5;
+            color: #000;
+            padding: 20px;
+            border-bottom: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="header"><h3>Header</h3></div>
+        <div class="navigation">Navigation</div>
+        <div class="content">
+            <h1>Hello World</h1>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae tenetur eius at facere, magnam eligendi nostrum non. Nulla, ipsa voluptate! Consequatur rem ipsam sapiente eaque porro sint iure quia voluptatem.</p>
+
+            <h3>Hello World</h3>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit modi odit veniam laudantium sint eligendi alias, iusto illum velit officiis ut, doloremque maiores, impedit minima inventore enim corporis ipsum quam?</p>
+        </div>
+    </div>
+</body>
+</html>

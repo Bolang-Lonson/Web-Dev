@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Forms</title>
+</head>
+<body>
+    <h3>Forms</h3>
+    <form action="" method="get">
+        <div>
+            <input type="email" value="Hello world" placeholder="Enter email" required name="email">
+            <input name="Password" type="password" value="opensesame" placeholder="Password" required>
+        </div>
+        <div>
+            <textarea cols="50" rows="5" placeholder="placeholder" name="address" required></textarea>
+
+            <button type="submit">Click me!</button>    <!--types are button, submit, reset etc-->
+        </div>
+        <div>
+            <select name="selected_option">
+                <option value="value1"> this is value 1</option>
+                <option value="value2"> this is value 2</option>
+                <option value="" disabled="disabled">- Disabled -</option>
+                <option value="default-is-selected" selected="selected"> Selected by default</option>
+
+            </select>
+        </div>
+    </form>
+
+    <h3>Embedding</h3>
+    <iframe src="https://www.youtube.com/embed/jyRkiHDgj-A" frameborder="0" width="560" height="315"
+        allowfullscreen></iframe>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 201: Final project</title>
+</head>
+<body>
+    <strong>Name:</strong>
+    <div id="name">...</div>
+
+    <strong>Eye color:</strong>
+    <div id="eyecolor">...</div>
+
+    <strong>Birth year:</strong>
+    <div id="birthyear">...</div>
+
+    <button class="getRandChar">Randomize!</button>
+
+    <script>
+        const name = document.getElementById('name');
+        const eyeColor = document.getElementById('eyecolor');
+        const birthYear = document.getElementById('birthyear');
+
+        const button = document.querySelector('.getRandChar');
+        
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            name.innerHTML = '<em>Loading ...</em>';
+            eyeColor.innerHTML = '<em>Loading ...</em>';
+            birthYear.innerHTML = '<em>Loading ...</em>';
+            const randNum = Math.ceil(Math.random() * 83);
+
+            fetch(`https://swapi.dev/api/people/${randNum}/`)
+                .then(resp => resp.json())
+                .then(character => {
+                    name.innerHTML = character['name'];
+                    eyeColor.innerHTML = character['eye_color'];
+                    birthYear.innerHTML = character['birth_year'];
+                });
+        })
+        
+    </script>
+</body>
+</html>
